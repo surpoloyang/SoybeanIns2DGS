@@ -55,11 +55,6 @@ Figure 6: The point cloud instance segmentation results of the soybean plants.
 
 Figure 7: Effect of prototype-based initialization on Gaussian instance modeling and point cloud instance segmentation.
 
-#### contrastive-alignment optimization
-
-<img width="1000" alt="image" src='media/contra_aug_with_render_v3.png'>
-
-Figure 8: Visual comparison of rendered feature maps and point cloud instance segmentation results of SoybeanIns2DGS with and without contrastive learning. 
 
 ## Data Preparation:
 We typically support data prepared as COLMAP format.
