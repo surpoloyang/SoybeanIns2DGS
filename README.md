@@ -41,32 +41,46 @@ The Gaussian point cloud included not only the soybean plant, but also the vise,
 Figure 4: The postprocessing of point clouds before MGIA.
 
 ## Results
+### Point Cloud Instance Segmentation
+<img width="1000" alt="image" src='media/ins_seg.png'>
+
+Figure 5: The point cloud instance segmentation results of the soybean plants.
+### Comparison with YOLO- and SAM-based Variants
+
+The following visualization compares organ-level instance segmentation of a mature soybean plant across the ground truth, SoybeanIns2DGS, YOLO-SoybeanIns2DGS, and SAM-SoybeanIns2DGS. The enlarged regions highlight differences in instance separation for closely spaced organs.
+
+<img width="1000" alt="Qualitative point cloud instance segmentation comparison with ground truth, SoybeanIns2DGS, YOLO-SoybeanIns2DGS, and SAM-SoybeanIns2DGS" src="media/yolo-xiaorong_v6.png">
+
+Figure 6: Qualitative comparison of soybean organ-level point cloud instance segmentation results, with zoomed-in views of challenging regions.
+
+The figure below compares semantic segmentation performance (precision, recall, F1 score, and IoU) and instance segmentation performance (mPrec, mRec, mCov, and mWCov) for SoybeanIns2DGS and the YOLO- and SAM-based variants. The comparison illustrates differences in both semantic-level accuracy and organ-instance consistency.
+
+<img width="1000" alt="Semantic and instance segmentation metrics comparing SoybeanIns2DGS, YOLO-based, and SAM-based variants" src="media/metrics_visualization_combined_vs_yolo_sam.png">
+
+Figure 7: Quantitative comparison of semantic and instance segmentation performance among SoybeanIns2DGS, YOLO-based, and SAM-based variants.
+
 ### Rendered Images
 <img width="1000" alt="image" src='media/result_mgia.gif'>
 
-Figure 5: The rendered images of cross-view consistent instance masks of the soybean plants.
+Figure 8: The rendered images of cross-view consistent instance masks of the soybean plants.
 
 ### Mask-Gaussian instance association
 <img width="1000" alt="image" src='media/MGIA-performance-v1.png'>
 
-Figure 6: Comparison of cross-view instance ID assignment performance among MGIA, 3DMA, and DEVA.
+Figure 9: Comparison of cross-view instance ID assignment performance among MGIA, 3DMA, and DEVA.
 
-### Point Cloud Instance Segmentation
-<img width="1000" alt="image" src='media/ins_seg.png'>
-
-Figure 7: The point cloud instance segmentation results of the soybean plants.
 ### Gaussian instance modeling
 #### Prototype-based Initialization
 
 <img width="1000" alt="image" src='media/GIM.png'>
 
-Figure 8: Effect of prototype-based initialization on Gaussian instance modeling and point cloud instance segmentation.
+Figure 10: Effect of prototype-based initialization on Gaussian instance modeling and point cloud instance segmentation.
 
 #### contrastive-alignment optimization
 
 <img width="1000" alt="image" src='media/contra_aug_with_render_v4.png'>
 
-Figure 9: Visual comparison of rendered feature maps and point cloud instance segmentation results of SoybeanIns2DGS with and without contrastive learning. 
+Figure 11: Visual comparison of rendered feature maps and point cloud instance segmentation results of SoybeanIns2DGS with and without contrastive learning. 
 
 ## Data Preparation:
 We typically support data prepared as COLMAP format.
